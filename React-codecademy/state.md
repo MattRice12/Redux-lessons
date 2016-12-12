@@ -1,4 +1,7 @@
-# State `getInitialState:`
+# Stateful vs Stateless
+  `Stateful` describes any component that has a getInitialState function; `stateless` describes any component that does not.
+
+# Set state `getInitialState:`
   Unlike props, a component's state is not passed in from the outside. A component decides its own state.
 
   To make a component have state, write a getInitialState function:
