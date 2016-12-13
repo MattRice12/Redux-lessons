@@ -1,0 +1,4 @@
+<Friend
+  name={friend.name}
+  status={friend.status}
+  key={friend.id} />
