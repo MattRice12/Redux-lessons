@@ -38,6 +38,7 @@
       <head>
         <meta charset="utf-8">
         <title>React.js using NPM, Babel6 and Webpack</title>
+        <link rel="stylesheet" href="/style/main.css">
       </head>
       <body>
         <div id="app" />
@@ -50,6 +51,14 @@
     ```
       <script src="./src/client/public/bundle.js" type="text/javascript"></script>
     ```
+
+# Add stylesheet
+  mkdir style
+  touch main.css
+  touch style/main.scss
+
+  sass style/main.scss main.css
+  sass --watch style/main.scss:main.css
 
 
 # Setup Babel-Loader

@@ -57,7 +57,7 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _FriendBox = __webpack_require__(/*! ./FriendBox.jsx */ 180);
+	var _FriendBox = __webpack_require__(/*! ./FriendBox.jsx */ 178);
 	
 	var _FriendBox2 = _interopRequireDefault(_FriendBox);
 	
@@ -22042,66 +22042,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
-/* 178 */,
-/* 179 */
-/*!***********************************!*\
-  !*** ./src/client/app/Friend.jsx ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Friend = function (_React$Component) {
-	  _inherits(Friend, _React$Component);
-	
-	  function Friend() {
-	    _classCallCheck(this, Friend);
-	
-	    return _possibleConstructorReturn(this, (Friend.__proto__ || Object.getPrototypeOf(Friend)).apply(this, arguments));
-	  }
-	
-	  _createClass(Friend, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'ul',
-	        null,
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          this.props.name,
-	          ' - ',
-	          this.props.status
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Friend;
-	}(_react2.default.Component);
-	
-	exports.default = Friend;
-
-/***/ },
-/* 180 */
+/* 178 */
 /*!**************************************!*\
   !*** ./src/client/app/FriendBox.jsx ***!
   \**************************************/
@@ -22163,13 +22104,26 @@
 	      });
 	    }
 	  }, {
+	    key: '_toggleFriend',
+	    value: function _toggleFriend() {
+	      var newShow;
+	      console.log(newShow);
+	      if (friend.show === true) {
+	        newShow = false;
+	      } else {
+	        newShow = true;
+	      }
+	      this.friend.setState({ show: newShow });
+	      console.log(show);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'h1',
+	          'ul',
 	          null,
 	          this._getFriends()
 	        )
@@ -22181,6 +22135,120 @@
 	}(_react2.default.Component);
 	
 	exports.default = FriendBox;
+
+/***/ },
+/* 179 */
+/*!***********************************!*\
+  !*** ./src/client/app/Friend.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Friend = function (_React$Component) {
+	  _inherits(Friend, _React$Component);
+	
+	  function Friend() {
+	    _classCallCheck(this, Friend);
+	
+	    var _this = _possibleConstructorReturn(this, (Friend.__proto__ || Object.getPrototypeOf(Friend)).call(this));
+	
+	    _this.state = {
+	      showFriend: false,
+	      message: "Show",
+	      nameColor: 'black',
+	      nameSize: 20
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(Friend, [{
+	    key: '_handleButtonClick',
+	    value: function _handleButtonClick() {
+	      var message = void 0;
+	
+	      message = this.state.message == "Show" ? "Hide" : "Show";
+	
+	      this.setState({
+	        showFriend: !this.state.showFriend,
+	        message: message
+	      });
+	    }
+	  }, {
+	    key: '_handleNameClick',
+	    value: function _handleNameClick() {
+	      var COLORS = ['black', 'red', 'green'];
+	      var SIZE = [20, 30, 40];
+	      var i = COLORS.indexOf(this.state.nameColor);
+	
+	      i = i < 2 ? i + 1 : 0;
+	
+	      this.setState({
+	        nameColor: COLORS[i],
+	        nameSize: SIZE[i]
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var showFriend = void 0;
+	      var changeColor = void 0;
+	
+	      var visible = _react2.default.createElement(
+	        'span',
+	        null,
+	        this.props.status
+	      );
+	      if (this.state.showFriend) {
+	        showFriend = visible;
+	      }
+	
+	      changeColor = _react2.default.createElement(
+	        'div',
+	        { className: 'name', onClick: this._handleNameClick.bind(this), style: { color: this.state.nameColor, fontSize: this.state.nameSize } },
+	        this.props.name
+	      );
+	
+	      return _react2.default.createElement(
+	        'h4',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          changeColor,
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: this._handleButtonClick.bind(this) },
+	            this.state.message
+	          ),
+	          showFriend
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Friend;
+	}(_react2.default.Component);
+	
+	exports.default = Friend;
 
 /***/ }
 /******/ ]);

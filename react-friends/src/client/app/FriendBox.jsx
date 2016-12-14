@@ -14,7 +14,7 @@ class FriendBox extends React.Component {
     this.setState({
       friends: [
           { id: 1, name: "Jimmy", status: "Best Friend" },
-          { id: 2, name: "Kimmy", status: "Good Friend"},
+          { id: 2, name: "Kimmy", status: "Good Friend" },
           { id: 3, name: "Timmy", status: "Acquaintence" }
       ]
     })
@@ -31,9 +31,21 @@ class FriendBox extends React.Component {
     });
   }
 
+  _toggleFriend() {
+    var newShow;
+    console.log(newShow);
+    if (friend.show === true) {
+      newShow = false;
+    } else {
+      newShow = true;
+    }
+    this.friend.setState({ show: newShow })
+    console.log(show)
+  }
+
   render() {
     return (<div>
-        <h1>{this._getFriends()}</h1>
+        <ul>{this._getFriends()}</ul>
       </div>
     )
   }
